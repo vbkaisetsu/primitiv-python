@@ -7,36 +7,6 @@ stages:
 
 matrix:
   include:
-    - stage: test
-      os: linux
-      env: SCRIPT=ubuntu WITH_CORE_LIBRARY=yes
-      services: docker
-    - stage: test
-      os: linux
-      env: SCRIPT=ubuntu
-      services: docker
-    - stage: test
-      os: linux
-      env: SCRIPT=debian WITH_CORE_LIBRARY=yes
-      services: docker
-    - stage: test
-      os: linux
-      env: SCRIPT=debian
-      services: docker
-    - stage: test
-      os: linux
-      env: SCRIPT=fedora WITH_CORE_LIBRARY=yes
-      services: docker
-    - stage: test
-      os: linux
-      env: SCRIPT=fedora
-      services: docker
-    - stage: test
-      os: osx
-      env: SCRIPT=osx WITH_CORE_LIBRARY=yes
-    - stage: test
-      os: osx
-      env: SCRIPT=osx
     - if: branch = develop
       stage: deploy
       os: linux
